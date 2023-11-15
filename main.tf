@@ -1,12 +1,4 @@
 terraform {
-  backend "remote" {
-    hostname = "app.terraform.io"
-    organization = "devops-org-2023"
-
-    workspaces {
-      name = "gitops"
-    }
-  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -16,7 +8,6 @@ terraform {
 }
 
 provider "aws" {
-  profile = "default"
   region  = "us-east-1"
 }
 
